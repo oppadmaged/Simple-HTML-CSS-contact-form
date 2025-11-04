@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --LightGreen: hsl(148, 38%, 91%);
+    --Green:      hsl(169, 82%, 27%);
+    --Red:        hsl(0, 66%, 54%);
+    --White:      hsl(0, 0%, 100%);
+    --Grey:       hsl(186, 15%, 59%);
+    --DarkGrey:   hsl(187, 24%, 22%);
+}
+body{
+    background-color: var(--LightGreen);
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+}
+h1{
+  color: var(--DarkGrey);
+  margin-bottom:30px;
+}
+.row{
+    display: flex;
+    gap: 1rem;
+}
+.row > div {
+    flex: 1;
+}
+.container {
+    background-color:var(--White);
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 15px;
+    
+}
+label{
+    color: var(--DarkGrey);
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+input:not([type="checkbox"]):not([type="radio"]), textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid var(--Grey);
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: var(--White);
+    outline: none;
+}
+input:not([type="radio"]):hover, textarea:hover, .radio-container:hover{
+    border-color: var(--Green);
+}
+textarea {
+    min-height: 100px;
+}
+input[type="radio"] {
+    width: 15px;
+    accent-color: var(--Green);
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+button{
+    width: 100%;
+    background-color: var(--Green);
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    color: var(--White);
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(169, 82%, 22%);
+}
+.checkbox-label{
+    margin: 1rem 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+.radio-container{
+    border: 1.5px solid var(--Grey);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    gap: 1rem;
+    cursor: pointer;
+    width: 100%;
+    min-width: 0;
+}
+.required{
+    color: var(--Green);
+}
+
+label:has(input[type="radio"]:checked) {
+    background-color: var(--LightGreen);
+}
